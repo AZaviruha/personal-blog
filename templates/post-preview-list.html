@@ -1,0 +1,13 @@
+<div class="posts-list">
+    $for(posts)$
+        <section class="post-info">
+            <h2><a href="$url$">$title$</a></h2>
+            <div class="post-date">$date$</div><br>
+
+            <div class="post-preview">$tldr$</div>
+        </section>
+
+        $sep$
+        <div class="post-info-separator">***</div>
+    $endfor$
+</div>
