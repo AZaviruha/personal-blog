@@ -1,0 +1,401 @@
+/*
+    Styles:
+        - Global
+        - Header
+        - Blog Tags
+        - Articles
+        - Footer
+*/
+
+
+
+/* Global */
+
+body {
+    font: 17px 'Source Sans Pro', sans-serif; /* available: 300, 400, 600 */
+    font-weight: 300;
+
+    min-width: 900px;
+
+    background-color: #fbfbfb;
+}
+
+
+a {
+    font-weight: 600;
+    color: #fce38a;
+}
+
+
+button {
+    display: inline-block;
+
+    font-weight: 400;
+    color: #5d737e;
+    text-transform: uppercase;
+    line-height: 42px;
+
+    padding: 0 36px;
+    border-radius: 4px;
+    border: 0;
+    background: #fce38a;
+    vertical-align: middle;
+    box-shadow: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+
+
+button:focus {
+    outline: none;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: inline-block;
+
+    font: 16px 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 42px;
+    color: #f8f8f8;
+
+    width: 340px;
+    
+    margin: 0;
+    padding: 0 24px;
+    border-radius: 4px;
+    background-color: rgba(248, 248, 248, .2);
+    vertical-align: middle;
+    box-shadow: none;
+    border: none;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+}
+
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    font-weight: 300;
+    color: rgba(248, 248, 248, .7);
+}
+
+
+
+.bold-text {
+    font-weight: 600;
+}
+
+.rounded-image {
+    border-radius: 50%;
+    max-height: 120px;
+}
+
+
+
+/* Header */
+
+header {
+    display: flex;
+}
+
+
+header .blog__presentation {
+    display: flex;
+    justify-content: center;
+
+    width: 95%;
+}
+
+
+header .blog__presentation .blog__presentation--title h1 {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 48px;
+}
+
+
+header .blog__presentation .author-name,
+header .blog__presentation .blog-name {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+header .blog__presentation .author-name {
+    color: #2893B2;
+}
+
+
+header .blog__presentation .blog-name {
+    font-weight: 300;
+
+    margin-top: 8px;
+}
+
+
+header .github-profile {
+    margin: 54px 20px;
+}
+
+
+
+/* Blog Tags */
+
+.labeled-arrows {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.labeled-arrows .labeled-arrows__image {
+    position: absolute;
+
+    width: 701px;
+    height: 105px;
+
+    background: url('../images/concept-lines.png') no-repeat;
+    top: -50px;
+}
+
+
+.blog__tags {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 72px;
+}
+
+
+.blog__tags .tag {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #5d737e;
+
+    border: 2px solid #5d737e;
+    border-radius: 16px;
+
+    padding: 0 20px;
+    user-select: none;
+}
+
+
+.blog__tags .tag:hover {
+    color: #f8f8f8;
+    background-color: #5d737e;
+
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+
+
+.blog__tags .tag.tag--active {
+    color: #f8f8f8;
+    background-color: #5d737e;
+}
+
+
+.blog__tags .tag .quantity {
+    font-size: 12px;
+    font-weight: 300;
+
+    margin-left: 4px;
+}
+
+
+.blog__tags .tag:not(:first-child) {
+    margin-left: 20px;
+}
+
+
+
+/* Articles */
+
+.articles,
+.single-article {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.articles {
+    margin-top: 120px;
+}
+
+
+.articles article,
+.single-article article {
+    width: 690px;
+
+    padding: 44px;
+}
+
+.articles article {
+    height: 324px;
+}
+
+
+.articles article:hover {
+    background-color: #f2f2f3;
+    cursor: pointer;
+
+    transition: .5s ease;
+}
+
+
+.articles .article__header,
+.single-article .single-article__header {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #2893B2;
+}
+
+
+.articles .article__header .article__title {
+    padding: 24px 44px 0 0;
+}
+
+.single-article .single-article__header .single-article__title {
+    padding-top: 24px;
+    text-align: justify;
+}
+
+
+.articles .article__content,
+.single-article .single-article__content {
+    font-size: 18px;
+    line-height: 2;
+    text-align: justify;
+
+    margin-top: 24px;
+    min-height: 108px;
+}
+
+
+.articles .article__tag,
+.single-article .single-article__tag {
+    display: inline-block;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #5d737e;
+
+    border: 2px solid #5d737e;
+    border-radius: 16px;
+
+    padding: 0 20px;
+    margin-top: 44px;
+    user-select: none;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: #f8f8f8;
+
+    min-height: 148px;
+
+    margin-top: 88px;
+    background-color: #5d737e;
+}
+
+
+footer section {
+    display: flex;
+    align-items: center;
+
+    width: 690px;
+
+    margin-left: 44px;
+    margin-right: 44px;
+}
+
+
+footer .add-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    text-align: right;
+
+    width: 100%;
+}
+
+
+footer .add-info .add-info__content p:not(:first-child) {
+    margin-top: 12px;
+}
+
+
+footer .subscription .email,
+footer .subscription button {
+    margin-top: 12px;
+}
+
+
+footer .subscription button {
+    margin-left: 12px;
+}
+
+
+/* Media queries */
+
+@media (max-width: 1366px) {
+    .articles,
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .articles .article__content {
+        min-height: initial;
+    }
+
+    footer {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    footer section {
+        justify-content: center;
+
+        margin: 0;
+    }
+
+    footer .subscription {
+        text-align: center;
+    }
+
+    footer .add-info {
+        align-items: center;
+        text-align: center;
+
+        margin-top: 40px;
+    }
+}

@@ -1,13 +1,21 @@
-<div class="posts-list">
+<section class="articles">
     $for(posts)$
-        <section class="post-info">
-            <h2><a href="$url$">$title$</a></h2>
-            <div class="post-date">$date$</div><br>
+        <article>
+            <div class="article__header">
+                <div class="article__title">
+                    <!-- <h2><a href="$url$">$title$</a></h2> -->
+                    <h2>$title$</h2>
+                </div>
+                
+                <img src="http://via.placeholder.com/120x120" class="rounded-image" alt="">
+            </div>
 
-            <div class="post-preview">$tldr$</div>
-        </section>
+            <div class="article__content">
+                <p>$tldr$</p>
+            </div>
 
-        $sep$
-        <div class="post-info-separator">***</div>
+            <div class="article__tag">Программирование</div>
+        </article>
     $endfor$
-</div>
+</section>
+
